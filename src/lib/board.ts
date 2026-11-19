@@ -3,7 +3,7 @@
 import { RegExpMatcher, englishDataset, englishRecommendedTransformers } from 'obscenity';
 
 export const NAME_MAX = 16;
-export const MS_MIN = 20000;
+export const MS_MIN = 12000;
 export const MS_MAX = 600000;
 export const SLACK_MS = 2000;
 export const TOKEN_TTL_MS = 30 * 60 * 1000;

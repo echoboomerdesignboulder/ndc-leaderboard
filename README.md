@@ -15,7 +15,7 @@ With the app mounted at `/api`:
 ## Rules enforced on the server
 
 - Name: trimmed, 1 to 16 characters, letters, numbers, space and `.'&-` only, then a profanity filter (`obscenity`).
-- Time: `ms` is a whole number from 20000 to 600000.
+- Time: `ms` is a whole number from 12000 to 600000. The fastest possible run is about 17 seconds.
 - Anti-cheat: the score is rejected if `ms` is more than 2 seconds shorter, or more than 2 seconds longer,
   than the real time between the token being issued and the run ending. Each token works once.
 - Rate limit: 5 posts per caller per 10 minutes (60 token requests). Callers are counted by a keyed hash; raw IPs are not stored.
