@@ -23,6 +23,12 @@ With the app mounted at `/api`:
 
 Errors: `422 { error: "name" | "ms" }`, `403 { error: "token" | "time" }`, `429 { error: "rate" }`.
 
+## Keeping MS_MIN in step with the game
+
+The page's tap boost scales with cadence and the speed ceiling is 3.2, so the fastest
+possible run is about 17 seconds. MS_MIN is set below that. If the game's top speed is
+raised again, lower MS_MIN to match or genuine fast runs will be rejected.
+
 ## Deploy (Webflow Cloud)
 
 1. In the Webflow workspace, create a Cloud app from this repo, target the existing Echo Boomer Design site, mount path `/api`, branch `main`.
